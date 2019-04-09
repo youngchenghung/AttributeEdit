@@ -1,0 +1,3859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ManholeAttribute</class>
+ <widget class="QDialog" name="ManholeAttribute">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>827</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>AcadEref</family>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>人孔屬性</string>
+  </property>
+  <property name="toolTip">
+   <string notr="true"/>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>781</width>
+     <height>771</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Unicode MS</family>
+    </font>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>屬性</string>
+    </attribute>
+    <widget class="QLabel" name="label_cover_width">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>160</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>蓋部寬度</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_bury_loc">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>280</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>埋設位置</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_mhole_depth">
+     <property name="geometry">
+      <rect>
+       <x>514</x>
+       <y>200</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>孔深</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_maint_date">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>660</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_oper_phase">
+     <property name="geometry">
+      <rect>
+       <x>618</x>
+       <y>360</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>0 廢棄管</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1 新建使用中</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2 更動使用中</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_cover_width">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>160</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="maxLength">
+      <number>32767</number>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_cover_type">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>120</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>0 圓孔</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1 方孔</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2 圓孔</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_proj_name">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>320</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;工程名稱&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_const_unit">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>240</y>
+       <width>384</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>30</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_const_unit">
+     <property name="geometry">
+      <rect>
+       <x>266</x>
+       <y>240</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;監造單位&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_mhole_depth">
+     <property name="geometry">
+      <rect>
+       <x>618</x>
+       <y>200</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="maxLength">
+      <number>32767</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_assets_code">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>240</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>7</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_bury_loc">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>280</y>
+       <width>632</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>60</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_mhole_id">
+     <property name="geometry">
+      <rect>
+       <x>618</x>
+       <y>40</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>15</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_offset_dist">
+     <property name="geometry">
+      <rect>
+       <x>618</x>
+       <y>160</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="maxLength">
+      <number>32767</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_oper_phase">
+     <property name="geometry">
+      <rect>
+       <x>514</x>
+       <y>360</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>作業區分</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_mhole_type">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>80</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>M1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>M2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>M3</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_coord_97x">
+     <property name="geometry">
+      <rect>
+       <x>458</x>
+       <y>520</y>
+       <width>152</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;位置Ｘ坐標(TWD97)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_bury_date">
+     <property name="geometry">
+      <rect>
+       <x>618</x>
+       <y>120</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>15</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_maint_date">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>490</y>
+       <width>96</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;養護檢查&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;日期及紀錄&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_coord_67x">
+     <property name="geometry">
+      <rect>
+       <x>618</x>
+       <y>440</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>999999.999; </string>
+     </property>
+     <property name="text">
+      <string>000000.000</string>
+     </property>
+     <property name="maxLength">
+      <number>10</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_coord_67x">
+     <property name="geometry">
+      <rect>
+       <x>458</x>
+       <y>440</y>
+       <width>152</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>位置Ｘ坐標(TWD67)</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonOK">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>670</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>儲存</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_mhole_id">
+     <property name="geometry">
+      <rect>
+       <x>514</x>
+       <y>40</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;人手孔編號&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_admin_unit">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>80</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;管理單位&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_coord_97y">
+     <property name="geometry">
+      <rect>
+       <x>618</x>
+       <y>560</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>9999999.999; </string>
+     </property>
+     <property name="text">
+      <string>0000000.000</string>
+     </property>
+     <property name="maxLength">
+      <number>11</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_offset_dist">
+     <property name="geometry">
+      <rect>
+       <x>514</x>
+       <y>160</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>偏心距</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_cover_length">
+     <property name="geometry">
+      <rect>
+       <x>266</x>
+       <y>160</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>蓋部長度</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_mhole_status">
+     <property name="geometry">
+      <rect>
+       <x>514</x>
+       <y>80</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>人手孔狀態</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_bury_date">
+     <property name="geometry">
+      <rect>
+       <x>514</x>
+       <y>120</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;設置日期&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_mhole_mode">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>120</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>0 非測量點</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1 測量點</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2 合理化調整</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_remark">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>400</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>註記說明</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_cover_type">
+     <property name="geometry">
+      <rect>
+       <x>266</x>
+       <y>120</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>孔蓋種類</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_coord_97x">
+     <property name="geometry">
+      <rect>
+       <x>618</x>
+       <y>520</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>999999.999; </string>
+     </property>
+     <property name="text">
+      <string>000000.000</string>
+     </property>
+     <property name="maxLength">
+      <number>10</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_coord_67y">
+     <property name="geometry">
+      <rect>
+       <x>618</x>
+       <y>480</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>9999999.999; </string>
+     </property>
+     <property name="text">
+      <string>0000000.000</string>
+     </property>
+     <property name="maxLength">
+      <number>11</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_unific_id">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>40</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;識別碼&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_assets_code">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>240</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;財產編號&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_maint_rec">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>360</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>維護記錄</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_coord_97y">
+     <property name="geometry">
+      <rect>
+       <x>458</x>
+       <y>560</y>
+       <width>152</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;位置Ｙ坐標(TWD97)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_coord_67y">
+     <property name="geometry">
+      <rect>
+       <x>458</x>
+       <y>480</y>
+       <width>152</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>位置Ｙ坐標(TWD67)</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_mhole_status">
+     <property name="geometry">
+      <rect>
+       <x>618</x>
+       <y>80</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>0 正常</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1 停用</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_admin_unit">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>80</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>7</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_mhole_mode">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>120</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;測量註記&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_unific_id">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>40</y>
+       <width>21</width>
+       <height>32</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_base_elev">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>200</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;地盤高程&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_maint_rec">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>360</y>
+       <width>384</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>20</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_remark">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>400</y>
+       <width>632</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>50</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_cover_length">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>160</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="maxLength">
+      <number>32767</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_proj_name">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>320</y>
+       <width>632</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>50</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_base_elev">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>200</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="maxLength">
+      <number>32767</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_mhole_type">
+     <property name="geometry">
+      <rect>
+       <x>266</x>
+       <y>80</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;人孔種類&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_botm_elev">
+     <property name="geometry">
+      <rect>
+       <x>266</x>
+       <y>200</y>
+       <width>96</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>孔底高</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_botm_elev">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>200</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="maxLength">
+      <number>32767</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_unific_id">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>40</y>
+       <width>211</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="maxLength">
+      <number>22</number>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listWidget_maint_date">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>432</y>
+       <width>331</width>
+       <height>221</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_angle">
+     <property name="geometry">
+      <rect>
+       <x>443</x>
+       <y>40</y>
+       <width>63</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>999.99; </string>
+     </property>
+     <property name="text">
+      <string>000.00</string>
+     </property>
+     <property name="maxLength">
+      <number>6</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_botm_elev_2">
+     <property name="geometry">
+      <rect>
+       <x>363</x>
+       <y>40</y>
+       <width>81</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string>旋轉角度</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btUID">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>670</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>填入識別碼</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>三支距</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>40</y>
+       <width>621</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>240</red>
+           <green>240</green>
+           <blue>240</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>240</red>
+           <green>240</green>
+           <blue>240</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>240</red>
+           <green>240</green>
+           <blue>240</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>240</red>
+           <green>240</green>
+           <blue>240</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>位置描述</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <widget class="QLabel" name="lbl_pin1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>581</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>第一支點      距【】【】公尺</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_pin2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>581</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>第二支點      距【】【】公尺</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_pin3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>581</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>第三支點      距【】【】公尺</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>180</y>
+       <width>621</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+      </font>
+     </property>
+     <property name="title">
+      <string>第一支點</string>
+     </property>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>距</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teP1disc">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>291</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbP1pos">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>30</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電力桿</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電信桿</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電力人孔</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電信人孔</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電信箱座</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>路燈</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>交通號誌</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>門柱</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>屋角</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>建物</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>三角點</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>水準點</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>變電箱座</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>變壓箱座</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>安全島</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>水池</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>板牆</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>圍牆</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>路邊</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>鐵絲網</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>路標</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>其他</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTextEdit" name="teP1dis">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>30</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>公尺</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>16</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teP1x">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>70</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>70</y>
+        <width>16</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teP1y">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>70</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btP1xy">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>70</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>選取支點位置</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>300</y>
+       <width>621</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+      </font>
+     </property>
+     <property name="title">
+      <string>第二支點</string>
+     </property>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>距</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teP2disc">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>291</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbP2pos">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>30</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電力桿</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電信桿</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電力人孔</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電信人孔</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電信箱座</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>路燈</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>交通號誌</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>門柱</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>屋角</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>建物</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>三角點</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>水準點</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>變電箱座</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>變壓箱座</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>安全島</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>水池</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>板牆</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>圍牆</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>路邊</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>鐵絲網</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>路標</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>其他</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTextEdit" name="teP2dis">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>30</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>公尺</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>16</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teP2x">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>70</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>70</y>
+        <width>16</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teP2y">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>70</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btP2xy">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>70</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>選取支點位置</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>420</y>
+       <width>621</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+      </font>
+     </property>
+     <property name="title">
+      <string>第三支點</string>
+     </property>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>距</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teP3disc">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>291</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbP3pos">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>30</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電力桿</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電信桿</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電力人孔</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電信人孔</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>電信箱座</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>路燈</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>交通號誌</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>門柱</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>屋角</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>建物</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>三角點</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>水準點</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>變電箱座</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>變壓箱座</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>安全島</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>水池</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>板牆</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>圍牆</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>路邊</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>鐵絲網</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>路標</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>其他</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTextEdit" name="teP3dis">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>30</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>公尺</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>16</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teP3x">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>70</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>70</y>
+        <width>16</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teP3y">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>70</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btP3xy">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>70</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>選取支點位置</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButtonOK_pin">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>550</y>
+       <width>136</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>確認</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>現況圖</string>
+    </attribute>
+    <widget class="QGraphicsView" name="gvPhoto">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>751</width>
+       <height>661</height>
+      </rect>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="interactive">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignJustify|Qt::AlignTop</set>
+     </property>
+     <property name="resizeAnchor">
+      <enum>QGraphicsView::AnchorViewCenter</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btPrephoto">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>690</y>
+       <width>71</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>上一張</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btNextphoto">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>690</y>
+       <width>71</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>下一張</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btOpenphoto">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>690</y>
+       <width>91</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>開啟照片</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_photoname">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>670</y>
+       <width>361</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>檔名：</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_open_folder">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>700</y>
+       <width>221</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>開啟存檔資料夾</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string/>
+    </attribute>
+    <widget class="QTextEdit" name="teModel">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>40</y>
+       <width>161</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>280</y>
+       <width>671</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+      </font>
+     </property>
+     <property name="title">
+      <string>養護及檢查紀錄</string>
+     </property>
+     <widget class="QTextEdit" name="teWork03">
+      <property name="geometry">
+       <rect>
+        <x>349</x>
+        <y>107</y>
+        <width>311</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>81</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Serif</family>
+       </font>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_36">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>工作內容</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_37">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>工作內容</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_38">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>工作內容</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_39">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>工作內容</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_40">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>工作內容</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_41">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>工作內容</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTextEdit" name="teWork05">
+      <property name="geometry">
+       <rect>
+        <x>349</x>
+        <y>182</y>
+        <width>311</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teWork06">
+      <property name="geometry">
+       <rect>
+        <x>349</x>
+        <y>220</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teDate01">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>28</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teWork01">
+      <property name="geometry">
+       <rect>
+        <x>349</x>
+        <y>32</y>
+        <width>311</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teDate02">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>66</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>30</y>
+        <width>101</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Serif</family>
+       </font>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_26">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>第一次日期</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_42">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>第二次日期</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_43">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>第三次日期</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_44">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>第四次日期</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_45">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>第五次日期</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_46">
+         <property name="font">
+          <font>
+           <family>Arial Unicode MS</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>第六次日期</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTextEdit" name="teDate06">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>216</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teWork02">
+      <property name="geometry">
+       <rect>
+        <x>349</x>
+        <y>70</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teDate03">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>104</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teWork04">
+      <property name="geometry">
+       <rect>
+        <x>349</x>
+        <y>145</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teDate04">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>141</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="teDate05">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>181</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Unicode MS</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dte01">
+      <property name="geometry">
+       <rect>
+        <x>221</x>
+        <y>28</y>
+        <width>17</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dte02">
+      <property name="geometry">
+       <rect>
+        <x>221</x>
+        <y>66</y>
+        <width>17</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dte03">
+      <property name="geometry">
+       <rect>
+        <x>221</x>
+        <y>104</y>
+        <width>17</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dte04">
+      <property name="geometry">
+       <rect>
+        <x>221</x>
+        <y>141</y>
+        <width>17</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dte05">
+      <property name="geometry">
+       <rect>
+        <x>221</x>
+        <y>181</y>
+        <width>17</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dte06">
+      <property name="geometry">
+       <rect>
+        <x>221</x>
+        <y>216</y>
+        <width>17</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <zorder>teWork03</zorder>
+     <zorder>layoutWidget_2</zorder>
+     <zorder>teWork05</zorder>
+     <zorder>teWork06</zorder>
+     <zorder>teWork01</zorder>
+     <zorder>teDate02</zorder>
+     <zorder>layoutWidget_3</zorder>
+     <zorder>teDate06</zorder>
+     <zorder>teWork02</zorder>
+     <zorder>teDate03</zorder>
+     <zorder>teWork04</zorder>
+     <zorder>teDate04</zorder>
+     <zorder>teDate05</zorder>
+     <zorder>dte01</zorder>
+     <zorder>dte02</zorder>
+     <zorder>dte03</zorder>
+     <zorder>dte04</zorder>
+     <zorder>dte05</zorder>
+     <zorder>dte06</zorder>
+     <zorder>teDate01</zorder>
+    </widget>
+    <widget class="QTextEdit" name="teBloc">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>42</y>
+       <width>211</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="tePd">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>85</y>
+       <width>161</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="teId">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>131</y>
+       <width>161</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="teBdate">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>117</y>
+       <width>211</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="teTurn">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>155</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="teSize">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>225</y>
+       <width>161</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cbSw">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>180</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>12</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>31</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>31</height>
+      </size>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>0</width>
+       <height>11</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>17</width>
+       <height>17</height>
+      </size>
+     </property>
+     <item>
+      <property name="text">
+       <string>順時針</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>逆時針</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>40</y>
+       <width>101</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Serif</family>
+      </font>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_30">
+        <property name="font">
+         <font>
+          <family>Arial Unicode MS</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>埋設位置</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_31">
+        <property name="font">
+         <font>
+          <family>Arial Unicode MS</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>埋設深度</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_32">
+        <property name="font">
+         <font>
+          <family>Arial Unicode MS</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>埋設日期</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_33">
+        <property name="font">
+         <font>
+          <family>Arial Unicode MS</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>轉數</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_34">
+        <property name="font">
+         <font>
+          <family>Arial Unicode MS</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>開關時間</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_35">
+        <property name="font">
+         <font>
+          <family>Arial Unicode MS</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>註記說明</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QTextEdit" name="teBdepth">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>80</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="teTime">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>192</y>
+       <width>211</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="teRemark">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>230</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>101</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Serif</family>
+      </font>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="font">
+         <font>
+          <family>Arial Unicode MS</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>廠牌型號</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_11">
+        <property name="font">
+         <font>
+          <family>Arial Unicode MS</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>舊編號</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_12">
+        <property name="font">
+         <font>
+          <family>Arial Unicode MS</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>閥類編號</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_27">
+        <property name="font">
+         <font>
+          <family>Arial Unicode MS</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>開關轉向</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_28">
+        <property name="font">
+         <font>
+          <family>Arial Unicode MS</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>轉向口徑</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QComboBox" name="cbVtype">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>220</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>水力自動閥</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>制水閥</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>制水閥(附手輪)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>底閥</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>洩壓閥</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>氣動閥</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>浮球閥</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>逆止閥</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>排氣閥</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>減壓、持壓閥</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>電動閥</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>彈性坐封閘閥</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>彈性坐封閘閥(附手輪)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>蝶閥(豎式)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>蝶閥(橫軸式)</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QCheckBox" name="ckPosmap">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>795</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Unicode MS</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>位置圖</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="ckMemo">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>795</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Unicode MS</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>記錄卡</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btExport">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>790</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Unicode MS</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>轉出圖卡</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonCancel">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>790</y>
+     <width>136</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="teVx">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>790</y>
+     <width>20</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Unicode MS</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="teVy">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>790</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Unicode MS</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="tegid">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>790</y>
+     <width>20</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Unicode MS</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="teuid">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>790</y>
+     <width>20</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Unicode MS</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
